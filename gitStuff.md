@@ -1,47 +1,11 @@
 
-// TODO: make a repo with this readme, a gitignore, spilt content into seperate .MDs
-
-# what you need
-- [Terminal](#terminal)
-- [Git](#git)
-- [Github]
-- [Sublime](#sublime)
-
-## Terminal <a name="terminal">*</a>
-### Windows
-
-### Mac
-#### Iterm:
-
-Move through the file system.
-`cd name of child folder`, moves you down.
-`cd ..`, moves you up.
-
-__Let's make an some aliases__ 
-
- `alias subl='open -a "Sublime Text 2"'`.<br>
-Now `subl . `, opens the folder you're in, in sublime.
-
-
-#### .zshrc: 
-`alias finder="open --reveal` opens the folder you're in, in the finder window: 
-Now `finder`
-	
-shortcuts:
-
-	cmd + return -> Fullscreen mode
-	cmd + D -> Split panes vertically
-	cmd + shift + D -> Split panes horizontally
-	cmd + ~ -> Switch between fullscreen iterm windows
-
-
-## Git <a name="git">*</a>
-### Installation
+# Git <a name="git">*</a>
+## Installation
 #### Windows
 [installation options](http://git-scm.com/book/en/v2/Getting-Started-Installing-Git#Installing-on-Windows)
 
-#### Mac
-##### homebrew
+### Mac
+#### homebrew
 It's easy. __Copy__...
 
 ```
@@ -54,7 +18,7 @@ then: `brew install git`
 More about  [Homebrew](http://brew.sh/)
 
 ### Git It
-Git is like a bush. `master` is dirt. Everything comes out of the dirt and eventually goes back to it. `develop` is the trunk that all the branches grow from. When you `cut a branch`, it's like you made a clone of the bush. The new branch has all of the same properties of the bush, **when** you cut it. A `feature/` branch grows out of the `develop` trunk, they have new stuff. A `release/` branch is a `feature/` you gave to your friend. You make a `hotfix/` branch when your friend brings his `feature/` back because it has bugs on it. 
+Git is like a bush. `master` is dirt. Everything comes out of the dirt and eventually goes back to it. `develop` is the trunk that all the branches grow from. When you `cut a branch`, it's like you made a clone of the bush. The new branch has all of the same properties of the bush, **when** you cut it. A `feature/` has new stuff that's not ready for `develop`. A `release/` branch is a `feature/` you gave to your friend. You make a `hotfix/` branch when your friend brings his `feature/` back because it has bugs on it. 
 
 ##### Get  comfortable using words like:
 - __Local__ = on your computer. Ex: That's a *local* branch.
@@ -63,13 +27,12 @@ Git is like a bush. `master` is dirt. Everything comes out of the dirt and event
 - __Root__ = The folder that holds all the files. Ex: I'm in  the *root* of the *repo*. Go to the *root* of your computer. 
 
 ### Configure Git
-- Add a file named `.gitignore` to the root of your working copy. 
 
 ##### How do I get all the things off of Github and onto my computer?
-- `git clone https://github.com/projectName.git`
+Find where you want to put your new *repo*, then: `git clone https://github.com/projectName.git`
 
 ##### Where are the branches?
-- `git branch`,  show the branches on your computer.
+- `git branch`, show the branches on your computer.
 - `git branch -a`, show the branches on the *repo*.
 - `git branch -D someBranch`, deletes some branch
 - `git fetch origin` or `git fetch origin --all` pulls all the branches, from Github, onto your `local`. 
@@ -120,7 +83,7 @@ Count Chocula's line 20:
 
 Your line 20:
 
-	I like dragons
+	I ride dragons.
 
 You have a __merge conflict__ because Count Chocula's line 20 is different than yours. 
 
@@ -130,7 +93,7 @@ thisFile.js now has 2 copies of line 20. Do a `git status` to see the files that
 	
 	I vant to eat your cereal!
 	=======
-	I like dragons
+	I ride dragons.
 	>>>>>>> commit #
 	
 ... delete the extra stuff that Git throws in there, and the line that you don't want.
@@ -144,7 +107,7 @@ When you're done with all your *merge conflicts*:
 Once the merge is done, your terminal will ask you to put in a message about the merge, but you can ignore it and just `:q!`, to get out. And the *merge conflict* is over!!
 
 ##### I have a bunch of commits on this branch and I don't want to fix the the same merge conflict 20 times...
-- `git rebase -i HEAD~the-number-of-commits-you-want-to-squash-into-one-commit`
+- `git rebase -i HEAD~the-number-of-commits-you-want-to-squash`
 -  `git merge --abort`, when your rebase goes wrong and you just want to get out of there.
 
 ##### How to be a time lord
@@ -156,18 +119,5 @@ Once the merge is done, your terminal will ask you to put in a message about the
 <br><br>
 [Git for beginners](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
 
-
-
-## Sublime <a name="sublime">*</a>
-
-shortcuts:
-
-- cmd + option + arrow keys =  Moves line(s) around.
-- cmd + D =  selects a word where the cursor is, repeat to select multiple instances.
-- cmd + shift + D = Duplicates the current line.
-- cmd + P = Opens a fuzzy search
-- cmd + shift + P = Opens the package manager
-- cmd + f = Search current file for a word or phrase
-- cmd + shift + f = Search entire project for a word or phrase
 
 
