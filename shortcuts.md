@@ -1,29 +1,3 @@
-# what you need
-- [Terminal](#terminal)
-- [Git](#git)
-- [Github]
-- [Sublime](#sublime)
-
-## Terminal <a name="terminal">*</a>
-### Windows
-
-### Mac
-#### Iterm:
-
-Move through the file system.
-`cd name of child folder`, moves you down.
-`cd ..`, moves you up.
-
-__Let's make an some aliases__ 
-
- `alias subl='open -a "Sublime Text 2"'`.<br>
-Now `subl . `, opens the folder you're in, in sublime.
-
-
-#### .zshrc: 
-`alias finder="open --reveal` opens the folder you're in, in the finder window: 
-Now `finder`
-  
 shortcuts:
 
 - cmd + return = Fullscreen mode
