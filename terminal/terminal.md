@@ -5,10 +5,10 @@
 - Windows
 
 ## Geek Speak
-- __Directory__ = is a folder in your `file system`.
-- __File System__ = is how you access all your files; like the `finder` on a mac or ... in Windows.
-- __Root__ = Where all of the directories live.
-- __CLI__ or __Command Line__ = commands that you use in the `terminal` to manuever through the `file system`.
+- `Directory` 				= is a folder in your `file system`.
+- `File System` 			= is how you access all your files; like the `finder` on a mac or ... in Windows.
+- `Root` 					= Where all of the directories live.
+- `CLI` or `Command Line` 	= commands that you use in the `terminal` to maneuver through the `file system`.
 
 ## Using the `cli`
 - `/`, root directory.
@@ -23,8 +23,7 @@
 ## vim
 
 ## iterm vs terminal
-- iterm install (mac + pc)
-
+- iterm install mac only
 
 ## ZSH
 - install
