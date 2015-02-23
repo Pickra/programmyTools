@@ -14,17 +14,17 @@ Your line 20:
 - Do a `git status` to see the file(s) that are in conflict and open a file.
 - In the file you will see...
 
-	<<<<<<< HEAD
-	
-	I vant to eat your cereal!
-	=======
-	I ride dragons.
-	>>>>>>> theCommitNumber
+```
+<<<<<<< HEAD
+I vant to eat your cereal!
+=======
+I ride dragons.
+>>>>>>> theCommitNumber
+```
 	
 ... delete the extra stuff that Git throws in there, and the line that you don't want.
 
 #### When you've fixed all your `merge conflicts`:
-
 1. `git status`
 2. `git add` the files that changed.
 3. `git rebase --continue`, tells git you've fixed the `merge conflicts` and are ready to move on.
@@ -45,7 +45,7 @@ Your line 20:
 
 ## More Info
 [The Simple Guide](http://rogerdudler.github.io/git-guide/)
-<br><br>
+<br>
 [Git for beginners](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
-<br><br>
+<br>
 [git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
