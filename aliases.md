@@ -15,7 +15,7 @@ Now just `git lg` instead of `git log`, and your commits will look pretty. But y
 
 ### Where do the aliases live?
 need to `ls -la`, see [terminal](terminal/terminal.md).
-- `.gitconfig` is located in the **home** directory; see [terminal](terminal/terminal.md).
+- `.gitconfig` is located in the `home directory`; see [terminal](terminal/terminal.md).
 - `.zshrc`
 
 `alias subl='open -a "Sublime Text 2"'`.
