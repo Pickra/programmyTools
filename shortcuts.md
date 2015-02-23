@@ -1,4 +1,5 @@
-## iTerm
+shortcuts:
+
 - cmd + return = Fullscreen mode
 - cmd + D = Split panes vertically
 - cmd + shift + D = Split panes horizontally
@@ -8,6 +9,9 @@
 
 
 ## Sublime <a name="sublime">*</a>
+
+shortcuts:
+
 - cmd + option + arrow keys =  Moves line(s) around.
 - cmd + D =  selects a word where the cursor is, repeat to select multiple instances.
 - cmd + shift + D = Duplicates the current line.

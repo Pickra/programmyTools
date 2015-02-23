@@ -9,7 +9,7 @@ It's easy. Just:
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
-... in the [terminal](../terminal/terminal.md).
+... __in your terminal.__
 
 then: `brew install git`
 
