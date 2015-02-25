@@ -27,17 +27,18 @@ I ride dragons.
 #### When you've fixed all your `merge conflicts`:
 1. `git status`
 2. `git add` the files that changed.
-3. `git rebase --continue`, tells git you've fixed the `merge conflicts` and are ready to move on.
+3. `git rebase --continue` or `git merge --continue` (depends on the situation... Git will tell you which one to use), tells Git that you've fixed the `merge conflicts` and are ready to move on.
 
 #### Once the merge is done, Git will ask you to put in a message about the merge.
 
 Now you're in `vim`, more on that in [terminal](../terminal/terminal.md). You can...
-- ... `git commit -m "Resolved merge conflict!"`
-- ... or you can just ignore it and `:q`, to get out.
+
+- ...`git commit -m "Resolved merge conflict!"`...
+- ...or you can just ignore it and `:q`, to get out.
 
 And the `merge conflict` is over!!
 
-
+<br>
 ## Time Lord Magic
 ### Moving through time
 
@@ -51,13 +52,13 @@ Ex: Doctor Who is in the year 2015. The 2015 `commit` is the `HEAD`. He wants to
 
 - `git reset --soft commitNumber`, is like the `--hard` command, except you're not actually there. You can look at stuff and move stuff around, but the `HEAD` is still 2015. If that's confusing, make a `pull request` for a better explanation.
 
-- `git reflog`, is a more robust version of `git log`. It shows all of your Git activity; `checkouts`, `pulls/pushes`, moving through time, etc... It looks something like... 
+- `git reflog`, is a more robust `git log`. It shows all of your Git activity; `checkouts`, `pulls/pushes`, moving through time, etc... It looks something like... 
 
 ```
 commitNumber HEAD{0}: commit: did some stuff
 commitNumber HEAD{1}: commit: deleted some stuff I needed
 commitNumber HEAD{2}: commit: gave a dinosaur a cool mustache
-commitNumber HEAD{3}: checkout: moving from develop to feature/DinosaursonSkateboards
+commitNumber HEAD{3}: checkout: moving from develop to feature/DinosaursOnSkateboards
 commitNumber HEAD{4}: pull origin develop: Fast-forward
 commitNumber HEAD{5}: checkout: moving from master to develop
 ```
@@ -87,6 +88,7 @@ git merge feature/someBranch
 - `git rebase -i HEAD~the-number-of-commits-you-want-to-squash`, takes the number of commits after `HEAD~` and squashes them into 1 `commmit`.
 - `git rebase --abort` or `git merge --abort`, when your rebase or merge goes wrong and you just want to get out of there.
 
+<br>
 ## More Git Stuff
 [The Simple Guide](http://rogerdudler.github.io/git-guide/)
 <br>
