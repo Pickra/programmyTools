@@ -8,13 +8,13 @@ Git is like a bush. `master` is the dirt that the bush grows out of. Everything 
 
 This is called the [Git Branching Model](http://nvie.com/posts/a-successful-git-branching-model/).
 
-Git is also kind of like a [tardis][tardis], but more about [time lord][time-lord magic] later.
+Git is also kind of like a [tardis][tardis], but more about [time lord][time-lord] magic later.
 
 ### Geek Speak
 - `local` 	= On your computer. Ex: That's a `local` branch.
 - `remote` 	= On Github, or some other server. Ex: That's on the `remote` branch.
 - `repo` 	= The repository that holds all the files. Ex: That's in my `local repo`.
-- `merge`	= Merges 1 branch into the other branch. I `merged` smellyBranch into hairyBranch. Now hairyBranch is smelly too, and the smelly branch is gone; unless you use [time lord][time-lord magic].
+- `merge`	= Merges 1 branch into the other branch. I `merged` smellyBranch into hairyBranch. Now hairyBranch is smelly too, and the smelly branch is gone; unless you use [time lord][time-lord] magic.
 - `origin`	= The `remote` server where the `repo` lives.
 
 #### How do I get all the things on the Githubs onto my `local`?
@@ -34,7 +34,7 @@ git clone https://github.com/projectName.git
 #### Where are the branches?
 - `git branch`, shows the branches on your `local`.
 - `git branch -a`, shows the branches on the `repo`.
-- `git branch -D someBranch`, deletes someBranch. You can't be in the branch you want to delete. Don't be afraid to delete branches because you can always you use [time lord][time-lord magic] to get it back.
+- `git branch -D someBranch`, deletes someBranch. You can't be in the branch you want to delete. Don't be afraid to delete branches because you can always you use [time lord][time-lord] magic to get it back.
 
 #### How do I get into some branch?
 - `git checkout someBranch`, move into some branch on your `local`.
