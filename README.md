@@ -14,9 +14,7 @@ When I go to learn about something new, I just want to get started. I don't want
 This is written with the assumption that the reader has `absolutely no understanding` of the programming world. It's written as a walkthrough to get the reader up and running, with some basic vocab, as soon as possible. Plus, it's an easy guide to reference at any time.
 
 ### Topics
-- [Terminal](terminal/terminal.md), coming soon
+- [Terminal](terminal/terminal.md)
 - [Git](git/git.md)
-- [Github](github.md), coming soon
 - [Sublime](sublime.md), coming soon
 - [Aliases](aliases.md), coming soon
-- [TODO](todo.md)

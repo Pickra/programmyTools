@@ -29,12 +29,7 @@ I ride dragons.
 2. `git add` the files that changed.
 3. `git rebase --continue` or `git merge --continue` (depends on the situation... Git will tell you which one to use), tells Git that you've fixed the `merge conflicts` and are ready to move on.
 
-#### Once the merge is done, Git will ask you to put in a message about the merge.
-
-Now you're in `vim`, more on that in [terminal](../terminal/terminal.md). You can...
-
-- ...`git commit -m "Resolved merge conflict!"`...
-- ...or you can just ignore it and `:q`, to get out.
+Once the merge is done, Git will ask you to put in a message about the merge. Now you're in `vi` or `vim`, more on that in [terminal](../terminal/terminal.md). Just ignore it and `:q`, to get out.
 
 And the `merge conflict` is over!!
 
@@ -89,10 +84,19 @@ git merge feature/someBranch
 - `git rebase --abort` or `git merge --abort`, when your rebase or merge goes wrong and you just want to get out of there.
 
 <br>
+
+## Let's look at [Github](https://github.com/naviance/angular-dragon-drop)
+### Where are the
+- branches
+- pull requests
+- commits
+
 ## More Git Stuff
 [The Simple Guide](http://rogerdudler.github.io/git-guide/)
 <br>
 [Git for Beginners](http://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide)
+<br>
+[Git Configuration](http://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
 
 
 [regenerates]: http://en.wikipedia.org/wiki/Regeneration_%28Doctor_Who%29
