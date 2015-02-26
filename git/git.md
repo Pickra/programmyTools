@@ -88,5 +88,5 @@ git pull origin thatBranch
 
 
 [tardis]: http://en.wikipedia.org/wiki/TARDIS
-[time-lord]: https://github.com/naviance/programmyTools/blob/master/git/moreGitStuff.md#time-lord-magic
-[merge-conflict]: https://github.com/naviance/programmyTools/blob/master/git/moreGitStuff.md#whats-a-merge-conflict
+[time-lord]: https://github.com/Pickra/programmyTools/blob/master/git/moreGitStuff.md#time-lord-magic
+[merge-conflict]: https://github.com/Pickra/programmyTools/blob/master/git/moreGitStuff.md#whats-a-merge-conflict

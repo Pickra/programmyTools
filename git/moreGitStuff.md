@@ -85,12 +85,6 @@ git merge feature/someBranch
 
 <br>
 
-## Let's look at [Github](https://github.com/naviance/angular-dragon-drop)
-### Where are the
-- branches
-- pull requests
-- commits
-
 ## More Git Stuff
 [The Simple Guide](http://rogerdudler.github.io/git-guide/)
 <br>
