@@ -17,4 +17,3 @@ This is written with the assumption that the reader has `absolutely no understan
 - [Terminal](terminal/terminal.md)
 - [Git](git/git.md)
 - [Aliases](aliases.md), unfinished
-- [Sublime](sublime.md), coming soon
