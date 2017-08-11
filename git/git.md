@@ -3,90 +3,115 @@
 
 ## [Installation](installation.md)
 
-## Git It
-Git is like a bush. `master` is the dirt that the bush grows out of. Everything comes out of the dirt and eventually goes back to it. `develop` is the trunk that all the branches grow from. When you `cut a branch`, it's like you cloned the bush. The new branch has all of the same properties of the bush, `when` you cut it. A `feature/` branch has new stuff that's not ready for `develop`. A `release/` branch is a `feature/` you gave to your friend. You cut a `hotfix/` branch when your friend brings their `feature/` back because it has bugs on it.
-
-This is called the [Git Branching Model](http://nvie.com/posts/a-successful-git-branching-model/).
-
-Git is also kind of like a [tardis][tardis], but more about [time lord][time-lord] magic later.
-
 ### Geek Speak
-- `local` 	= On your computer. Ex: That's a `local` branch.
-- `remote` 	= On Github, or some other server. Ex: That's on the `remote` branch.
-- `repo` 	= The repository that holds all the files. Ex: That's in my `local repo`.
-- `merge`	= Merges 1 branch into the other branch. I `merged` smellyBranch into hairyBranch. Now hairyBranch is smelly too, and the smelly branch is gone; unless you use [time lord][time-lord] magic.
-- `origin`	= The `remote` server where the `repo` lives.
+- `local` = On your computer. Ex: That's a `local` branch.
+- `remote` = On Github, or some other server. Ex: That's on the `remote` branch.
+- `repo` = The repository that holds all the files. Ex: That's in my `local repo`.
+- `origin` = The `remote` server where the `repo` lives.
+
+### Git It
+Git creates a time line. `master` is your home time line, a record of everything you’ve done.
+The [git documentation](https://rogerdudler.github.io/git-guide/) will refer to `master` as a `branch`.
+You can add `commits` to the `master` `branch`. A `commit` is a moment in time where someone did stuff.
+If multiple people are working on a `repo`, it's safer to cut a new branch from `master`.
+When you cut a new `branch`, you're cloning the old branch.
+It's like creating a new time line, where everything in the past is the same
+but you're creating a new future different from the old time line.
+The new branch is a safe place for you to make changes and add more stuff;
+you can always throw it away if something goes wrong. Once you've done some stuff on your new branch,
+and `committed` your changes, you can `merge` your branch into `master`.
+`Merging` a branch into another branch will either change the past or create a new future.
+Congratulations, you're now a [Time Lord](https://en.wikipedia.org/wiki/Time_Lord).
+Continue reading for some more basics or jump ahead to learn about
+[Time Lord magic](https://github.com/Pickra/programmyTools/blob/master/git/moreGitStuff.md#time-lord-magic). 
+
+Time Lords have conventions for making branches:
+
+- Again, `master` is the home time line.
+- The `develop` branch is the recent history.
+- A `feature/` branch is an alternate timeline cut from `develop`.
+If everything works out on the `feature/` branch, it'll be merged to `develop`
+and included in the recent history.
+- A `release/` branch is cut from `develop`, and `merged` to `master`
+where all the new changes from `develop` are then released into the universe for all your friends to see.
+- You cut a `hotfix/` branch when something's broken on `master` and a fix is needed asap.
+
+The above gives you a basic idea of some of these conventions,
+but you should read more about the [Git Branching Model](http://nvie.com/posts/a-successful-git-branching-model/).
 
 #### How do I get all the things on the Githubs onto my `local`?
+
 1. Find where you want to put your clone of the `repo`.
 2. Go to the `repo` on Github.
-3. Look for where it says `HTTPS clone URL`.
-4. Press the `copy to clipboard` button.
-5. Go to your [terminal](../terminal/terminal.md), `git clone URL`.
-
-It'll look something like...
+3. Look for the `Clone or download` button.
+4. Copy the clone command. It'll look something like... 
 
 ```
-git clone https://github.com/projectName.git
+git@github.com:AccountName/projectName.git
 ```
+
+5. Go to your [terminal](../terminal/terminal.md), type `git clone URL` and paste in the clone command.
+
 
 ## The following commands are run in the [terminal](../terminal/terminal.md).
+
 #### Where are the branches?
 - `git branch`, shows the branches on your `local`.
 - `git branch -a`, shows the branches on the `repo`.
-- `git branch -D someBranch`, deletes someBranch. You can't be in the branch you want to delete. Don't be afraid to delete branches because you can always you use [time lord][time-lord] magic to get it back.
+- `git branch -D someBranch`, deletes someBranch.
+You can't be in the branch you want to delete.
+Don't be afraid to delete branches because you can always you use [time lord magic][time-lord] to get it back.
 
-#### How do I get into some branch?
+#### How do I `git` into some branch?
 - `git checkout someBranch`, move into some branch on your `local`.
 - `git checkout -b someOtherBranch`, make a new branch and move into it.
 
-#### How do I get a branch onto my `local`?
-`git pull origin branchName`, `merges` a `remote` branch into your branch.
+#### How do I `git` a branch onto my `local`?
+`git pull origin branchName`.
 
 This is actually a more complex question. 
 
 - Do you already have a clone of that branch?
-
 	- If not, then `git pull origin thatBranch` is all you need.
-- If so
-
-	- do you need what's in your `local` branch? Watch out for a [merge conflict][merge-conflict]!
-	- or will the version in the `repo` have everything you need? If you run into a [merge conflict][merge-conflict], you can just... 
+	- If so,
+		- do you need what's in your `local` branch? Watch out for a [merge conflict][merge-conflict]!
+		- if the version in the `remote` has everything you need, you can just delete that branch... 
 
 ```
 git branch -D thatBranch 
 ```
-then 
+then pull down a fresh copy...
 
 ```
 git pull origin thatBranch
 ```
 
-`git fetch --all`, tells you about all the new stuff from the `remote repo`, so you don't have to ask your friend for the name of the branch you want to `checkout`. New stuff: new branches and new stuff not in existing `local` branches.
+`git fetch --all`, pulls down all the new branches from the `remote`.
 
 
 #### I changed some stuff, now what?
 1. `git status`, shows the files you changed. These files are `unstaged`.
 2. `git add fileName`, gets the `unstaged` files ready to go. These files are `staged`.
-
-	- `git add -A`, `adds` all of the `unstaged` files without having to type in all of the file names. Be careful, with great power comes great responsibility.
-3. `git commit -m "I did stuff!!"`, puts your `staged` files in a box with a message that says what you did to the files.
-4. `git log`, shows you all the `commits`. Each `commit` has a message, a number, who wrote it, and when it was written.
+	- `git add -A`, `adds` all of the `unstaged` files without having to type in all of the file names.
+	Be careful, with great power comes great responsibility.
+3. `git commit -m "I did stuff!!"`, `commits` your `staged`.
+4. `git log`, shows you all the `commits`, all the moments in time where something happened.
+Each `commit` has a message, a number, who wrote it, and when it was written.
 	- `git log -p`, shows what files changed and what changed in each file, for that `commit`.
 5. `q`, gets you out of `git log`.
 
 
 #### I forgot to put something in my last `commit`, now what?
-- `git commit --amend --no-edit`, throws a change in the last `commit` but doesn't change the message.
-- `git commit --amend -m "What I meant to say was..."`, changes the `commit` message, and throws in a change IF you have one.
+- `git commit -a --amend --no-edit`, throws a change in the last `commit` but doesn't change the message.
+- `git commit -a --amend -m "What I meant to say was..."`, changes the `commit` message,
+and adds your new change.
 
 #### Once your files are committed to going, they need a little push...
-`git push origin remoteBranchName`
+`git push origin branchName`
 
 ---
-### Do you want to learn about `merge conflicts`, how to be a `time lord` and [more git stuff](moreGitStuff.md)?
+### Do you want to learn about `merge conflicts`, how to do `time lord magic` and [more git stuff](moreGitStuff.md)?
 
 
-[tardis]: http://en.wikipedia.org/wiki/TARDIS
 [time-lord]: https://github.com/Pickra/programmyTools/blob/master/git/moreGitStuff.md#time-lord-magic
 [merge-conflict]: https://github.com/Pickra/programmyTools/blob/master/git/moreGitStuff.md#whats-a-merge-conflict
