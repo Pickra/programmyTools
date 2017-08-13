@@ -25,12 +25,12 @@ Congratulations, you're now a [Time Lord](https://en.wikipedia.org/wiki/Time_Lor
 Continue reading for some more basics or jump ahead to learn about
 [Time Lord magic](https://github.com/Pickra/programmyTools/blob/master/git/moreGitStuff.md#time-lord-magic). 
 
-Time Lords have conventions for making branches:
+Git/Time Lords have conventions for making branches:
 
 - Again, `master` is the home time line.
 - The `develop` branch is the recent history.
 - A `feature/` branch is an alternate timeline cut from `develop`.
-If everything works out on the `feature/` branch, it'll be merged to `develop`
+If everything works out on the `feature/` branch, it'll be `merged` to `develop`
 and included in the recent history.
 - A `release/` branch is cut from `develop`, and `merged` to `master`
 where all the new changes from `develop` are then released into the universe for all your friends to see.
@@ -58,13 +58,13 @@ git@github.com:AccountName/projectName.git
 #### Where are the branches?
 - `git branch`, shows the branches on your `local`.
 - `git branch -a`, shows the branches on the `repo`.
-- `git branch -D someBranch`, deletes someBranch.
+- `git branch -D someBranch`, deletes someBranch on your `local`.
 You can't be in the branch you want to delete.
 Don't be afraid to delete branches because you can always you use [time lord magic][time-lord] to get it back.
 
 #### How do I `git` into some branch?
-- `git checkout someBranch`, move into some branch on your `local`.
-- `git checkout -b someOtherBranch`, make a new branch and move into it.
+- `git checkout someBranch`, moves you into some branch on your `local`.
+- `git checkout -b someOtherBranch`, makes a new branch, on your `local` and moves you into it.
 
 #### How do I `git` a branch onto my `local`?
 `git pull origin branchName`.
@@ -75,7 +75,7 @@ This is actually a more complex question.
 	- If not, then `git pull origin thatBranch` is all you need.
 	- If so,
 		- do you need what's in your `local` branch? Watch out for a [merge conflict][merge-conflict]!
-		- if the version in the `remote` has everything you need, you can just delete that branch... 
+		- if the version in the `remote` has everything you need, you can just delete that `local` branch... 
 
 ```
 git branch -D thatBranch 
@@ -91,23 +91,28 @@ git pull origin thatBranch
 
 #### I changed some stuff, now what?
 1. `git status`, shows the files you changed. These files are `unstaged`.
-2. `git add fileName`, gets the `unstaged` files ready to go. These files are `staged`.
+2. `git add fileName`, gets the `unstaged` files ready to go. These files are now `staged`.
 	- `git add -A`, `adds` all of the `unstaged` files without having to type in all of the file names.
 	Be careful, with great power comes great responsibility.
-3. `git commit -m "I did stuff!!"`, `commits` your `staged`.
+3. `git commit -m "I did stuff!!"`, `commits` your `staged` changes.
 4. `git log`, shows you all the `commits`, all the moments in time where something happened.
 Each `commit` has a message, a number, who wrote it, and when it was written.
 	- `git log -p`, shows what files changed and what changed in each file, for that `commit`.
+	- `git diff`, is very similar but only shows the changes that occurred.
 5. `q`, gets you out of `git log`.
 
 
 #### I forgot to put something in my last `commit`, now what?
-- `git commit -a --amend --no-edit`, throws a change in the last `commit` but doesn't change the message.
+- `git commit -a --amend --no-edit`, puts all of the changes into the last `commit`
+but doesn't change the message.
 - `git commit -a --amend -m "What I meant to say was..."`, changes the `commit` message,
-and adds your new change.
+and adds your new changes.
 
 #### Once your files are committed to going, they need a little push...
-`git push origin branchName`
+`git push origin branchName`, pushes the new `local `commits to the `remote` `branch`.
+
+#### How do I delete a `remote` `branch`?
+`git push origin :branchName`, deletes the `remote` `branchName`.
 
 ---
 ### Do you want to learn about `merge conflicts`, how to do `time lord magic` and [more git stuff](moreGitStuff.md)?
