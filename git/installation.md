@@ -13,4 +13,4 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 then: `brew install git`
 
-## Get [Git](git/git.md)
+## Get [Git](git.md)
